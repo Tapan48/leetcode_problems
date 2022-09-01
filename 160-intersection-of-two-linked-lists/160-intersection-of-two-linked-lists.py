@@ -11,10 +11,11 @@ class Solution:
         
         x=set()
         
-        while headA:
-             x.add(headA)
+        while headA:       ## tc o(m+n)
+                            ## sc o(m) 
+            x.add(headA)
             
-             headA=headA.next
+            headA=headA.next
             
         while headB:
             

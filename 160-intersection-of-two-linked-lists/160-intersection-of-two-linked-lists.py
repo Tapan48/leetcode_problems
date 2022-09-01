@@ -27,7 +27,7 @@ class Solution:
         return None    
             
          """
-        
+        """
         curra,currb=headA,headB
         la,lb=0,0
         
@@ -62,8 +62,23 @@ class Solution:
             headB=headB.next
             
         return headA    
+        """
+        
+        l1,l2=headA,headB
+        
+        
+        while l1!=l2:
+            
+            l1=l1.next if l1 else headB
+            l2=l2.next if l2 else headA
+            
+        return l1    
+        
+        
+        
         
    
+
             
             
             

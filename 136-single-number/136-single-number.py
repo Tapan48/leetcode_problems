@@ -1,7 +1,7 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         
-        
+        """
         nums.sort()
         
         
@@ -23,9 +23,14 @@ class Solution:
                 return nums[l]
         
         return nums[l]
-        
-        
-        
+        """
+        res=0
+        for n in nums:
+            res=res^n
+            
+        return res    
+            
+            
         
         
         

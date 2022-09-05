@@ -23,7 +23,7 @@ class Solution:
                 return mid
             
             
-            if nums[mid]>=nums[l]:
+            if nums[mid]>=nums[l]:          ##  mid index present in left sorted array condition,then check if target is with mid and leftmost element
                 
                 if target<nums[mid] and target>=nums[l]:
                     r=mid-1
@@ -32,7 +32,8 @@ class Solution:
                 else:
                     l=mid+1
                     
-            else:
+            else:    ## mid index present in right sorted array condition
+                      ## see if target is within mid and rightmost element                
                 
                 if target>nums[mid] and target<=nums[r]:
                     l=mid+1

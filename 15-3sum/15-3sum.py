@@ -2,10 +2,10 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         
         
-        nums.sort()
-        res=[]
+        nums.sort()              ## tc o(n^2+nlogn)
+        res=[]                   ## concept of two sum 2 used 
         
-        for i,num in enumerate(nums):
+        for i,num in enumerate(nums): 
             
             
             if i>0 and num==nums[i-1]:
@@ -27,8 +27,8 @@ class Solution:
                 else:
                     
                     res.append([num,nums[l],nums[r]])
-                    l+=1
-                    while nums[l]==nums[l-1] and l<r:
+                    l+=1                                  ##   i    l   l'  r
+                    while nums[l]==nums[l-1] and l<r: ## [-2,-2,0,0,2,2]
                         l+=1
                     
         

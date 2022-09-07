@@ -8,16 +8,29 @@ class Solution:
         s=list(s)
         while l<r:
             
-           
-            if s[l] in vowels and s[r] in vowels:
-                s[l],s[r]=s[r],s[l]
-                l+=1
-                r-=1
-            if s[l] not in vowels:
+            
+            while s[l] not in vowels and l<r:
+                
                 l+=1
                 
-            if s[r] not in vowels:
+            while s[r] not in vowels and l<r:
+                
                 r-=1
+                
+            s[l],s[r]=s[r],s[l]
+            l+=1
+            r-=1
+        return ''.join(s)    
+            
+                
+                
+                
+            
+            
+            
+            
+           
+          
                 
                 
                 

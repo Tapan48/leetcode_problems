@@ -57,9 +57,7 @@ class Solution:
         return res            
            """                  
         prev=None
-        
         curr=head
-        
         
         while curr:
             
@@ -72,7 +70,7 @@ class Solution:
         result=[]
         while prev:
             
-            if stack is None:
+            if len(stack)==0:
                 result.append(0)
                 stack.append(prev.val)
                 prev=prev.next
@@ -91,24 +89,7 @@ class Solution:
                 
         result.reverse()
                 
-        return result       
-                
-                
-                
-                
-                
-            
-         
-            
-            
-            
-            
-            
-        
-        
-        
-        
-        
+        return result
         
         
         

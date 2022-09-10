@@ -70,7 +70,7 @@ class Solution:
         result=[]
         while prev:
             
-            if len(stack)==0:
+            if stack is None:
                 result.append(0)
                 stack.append(prev.val)
                 prev=prev.next

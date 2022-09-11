@@ -2,20 +2,18 @@ class Solution:
     def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
         
         
-        string=""
+   
         arr=[]
-        for char in licensePlate:
-            
-            if char.isalpha():
-              
-            
-                string+=char.lower()
+      
                 
         freqlet={}
         
-        for char in string:
+        for char in licensePlate:
             
-            freqlet[char]=freqlet.get(char,0)+1
+            
+            if char.isalpha():
+                char=char.lower()
+                freqlet[char]=freqlet.get(char,0)+1
          
         
         

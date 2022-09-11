@@ -8,9 +8,9 @@
 class Solution:
      def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
             
-            
+        """   
         x=[] 
-        def inorder(root):
+        def inorder(root):   ## recursive soltn
             
             if root:
                 
@@ -27,3 +27,29 @@ class Solution:
                 
         inorder(root)
         return x
+    """
+        
+        res=[]
+        stack=[]
+        
+        
+        while root or stack:
+            
+            while root:
+                stack.append(root)
+                root=root.left
+                
+            while stack:
+                node=stack.pop()
+                res.append(node.val)
+                if node.right:
+                    root=node.right
+                    break
+                else:
+                    root=None
+        return res            
+                    
+                    
+        
+        
+      

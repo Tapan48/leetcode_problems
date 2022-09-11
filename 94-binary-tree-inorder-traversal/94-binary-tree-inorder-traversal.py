@@ -28,12 +28,12 @@ class Solution:
         inorder(root)
         return x
     """
-        
+        """ 
         res=[]
         stack=[]
         
         
-        while root or stack:
+        while root or stack:     ## iterative soltn
             
             while root:
                 stack.append(root)
@@ -47,7 +47,27 @@ class Solution:
                     break
                 else:
                     root=None
+        return res
+    
+    """
+    
+    
+        res=[]
+        stack=[]
+        
+        
+        while root or stack:     ## iterative soltn
+            
+            while root:
+                stack.append(root)
+                root=root.left
+                
+            root=stack.pop()
+            res.append(root.val)
+            root=root.right
+            
         return res            
+                    
                     
                     
         

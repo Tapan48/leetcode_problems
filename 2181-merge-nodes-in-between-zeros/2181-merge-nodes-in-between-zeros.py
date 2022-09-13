@@ -8,7 +8,7 @@ class Solution:
         
         """
         dummy=ListNode(0,head)
-        arr=[]
+        arr=[]                         ### method 1 using 
         curr=head
         while curr:
             
@@ -34,7 +34,12 @@ class Solution:
         prev.next=None
         return head
        """
-        dummy=ListNode(0,head)
+        
+        
+        
+        
+        """
+        dummy=ListNode(0,head)    ## method 2 solved own
         prevprev=dummy
         prev=head
         curr=head.next
@@ -50,8 +55,31 @@ class Solution:
             prev=prev.next
         prevprev.next=None     
         return head    
+        """
+        ptr1=head
+        ptr2=head.next
+        
+        s=0
+        while ptr2:
             
-            
+            if ptr2.val!=0:
+                s+=ptr2.val
+                
+                ptr2=ptr2.next
+                
+            else:
+                ptr1=ptr1.next
+                
+                ptr1.val=s
+                ptr2=ptr2.next
+                s=0
+        ptr1.next=None
+        
+        return head.next
+                
+                
+        
+        
             
             
         

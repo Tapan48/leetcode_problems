@@ -6,7 +6,7 @@
 class Solution:
     def mergeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
-        
+        """
         dummy=ListNode(0,head)
         arr=[]
         curr=head
@@ -33,7 +33,23 @@ class Solution:
         
         prev.next=None
         return head
-       
+       """
+        dummy=ListNode(0,head)
+        prevprev=dummy
+        prev=head
+        curr=head.next
+        
+        while curr:
+            ts=0
+            while curr and curr.val!=0:
+                ts+=curr.val
+                curr=curr.next
+            curr=curr.next
+            prev.val=ts
+            prevprev=prev
+            prev=prev.next
+        prevprev.next=None     
+        return head    
             
             
             

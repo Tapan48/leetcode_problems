@@ -14,7 +14,7 @@ class Solution:
                     listwords[i]=root
                     break
                     
-        s=" ".join(map(str,listwords))
+        s=" ".join(listwords)
         return s
            
                     

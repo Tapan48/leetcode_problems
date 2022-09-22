@@ -1,12 +1,12 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         
-        dictt={")":"(", "}":"{","]":"["}
+        dictt={"(":")", "{":"}","[":"]"}
         
         stack=[]
         for brac in s:
             
-            if brac not in dictt:      ## open brackets added in stack if bracket
+            if brac in dictt:      ## open brackets added in stack if bracket
                                        ## found is open
                 stack.append(brac)
                 
@@ -14,7 +14,7 @@ class Solution:
             else:                      ##  check if last open bracket in stack==
                                            ## closed bracket found in string
                 
-                if stack and stack[-1]==dictt[brac]:
+                if stack and brac==dictt[stack[-1]]:
                     stack.pop()
                     
                 else:

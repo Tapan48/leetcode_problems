@@ -4,10 +4,36 @@ class Solution:
         
         
         
+            dictt={}
+            
+            for i in range(len(nums2)):
+                if i==len(nums2)-1:
+                    dictt[nums2[i]]=-1
+                
+                for j in range(i+1,len(nums2)):
+                    
+                    if nums2[j]>nums2[i]:
+                        dictt[nums2[i]]=nums2[j]
+                        
+                        break
+                        
+                if (j==len(nums2)-1)and nums2[j]<nums2[i]:
+                    
+                    dictt[nums2[i]]=-1
+                    
+            for x in range(len(nums1)):
+                
+                nums1[x]=dictt[nums1[x]]
+                
+            return nums1  
         
         
-            dictt={num:i for i,num in enumerate(nums1)}
-            res=[-1]*len(nums1) 
+        
+        
+        
+    """
+            dictt={num:i for i,num in enumerate(nums1)} ## tc : o(n) using stack
+            res=[-1]*len(nums1)                         # sc : o(len(nums1))  
             stack=[]
             for i in range(len(nums2)):
             
@@ -23,15 +49,26 @@ class Solution:
                     stack.append(val2)
                 
             return res        
+        """
         
         
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+        
     
-    
-    
-    
-    
-    
-                            
+                               
         
         
     """
@@ -50,6 +87,8 @@ class Solution:
                     break    
         return nums1
     """
+    
+    
         
     """ 
         res=[-1]*len(nums1)        ## tc : o(n^2)

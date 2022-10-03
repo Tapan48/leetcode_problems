@@ -3,12 +3,11 @@ class Solution:
         l=0
         r=len(nums)-1
         
-        if len(nums)==1 and nums[0]==val:
-            nums.remove(val)
-            return l
+     
         while l<=r:
-            if nums[l]==val:
-                while nums[r]==val and l<=r:
+            if nums[l]==val:                   ##  l pointer keeps track of elements=values
+                                               ## r pointer keeps track of elements notequalto                                                               values
+                while nums[r]==val and l<=r:  ## place nonvalues(r) at value position(l)
                     r=r-1
                 nums[l]=nums[r]
                 if r<l:

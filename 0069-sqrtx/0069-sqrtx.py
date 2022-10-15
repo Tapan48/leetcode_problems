@@ -4,10 +4,7 @@ class Solution:
         l=1
         r=x
         
-        if x==0:
-            return 0
-        elif x==1:
-            return 1
+     
         while (r-l)>1:
             
             
@@ -22,7 +19,7 @@ class Solution:
             else:
                 l=mid
                 
-        return l        
+        return (l+r)//2        
 
         
         

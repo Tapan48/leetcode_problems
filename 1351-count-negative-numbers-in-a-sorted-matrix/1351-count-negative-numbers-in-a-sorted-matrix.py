@@ -34,20 +34,28 @@ class Solution:
                 
         return cnt        
            """
-        def bin(row):
-            start, end = 0, len(row)
-            while start<end:
-                mid = start +(end -start) // 2
+      
+        def binarysearch(row):
+            
+            
+            l,r=0,len(row)
+            while l<r:
+                
+                mid=(l+r)//2
                 if row[mid]<0:
-                    end = mid
+                    r=mid
                 else:
-                    start = mid+1
-            return len(row)- start
-        
-        count = 0
+                    l=mid+1
+            return (len(row)-l)        
+        cnt=0
         for row in grid:
-            count += bin(row)
-        return(count)
+            
+            cnt+=binarysearch(row)
+            
+        return cnt    
+        
+        
+        
         
     
     

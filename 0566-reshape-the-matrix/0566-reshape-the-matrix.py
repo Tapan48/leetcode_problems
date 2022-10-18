@@ -21,8 +21,8 @@ class Solution:
                     if y==nc:
                         y=0
                         
-                        if x<nr:
-                            x+=1
+                        
+                        x+=1
             return arr                   
         
         else:

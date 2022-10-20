@@ -44,7 +44,8 @@ class Solution(object):
                 
             else:
                 break
-                
+        if not(toprow<=bottomrow):
+            return False
                 
          
         targetrow=matrix[midrow]

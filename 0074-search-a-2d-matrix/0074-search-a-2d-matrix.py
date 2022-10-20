@@ -5,6 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
+        """
         for row in matrix:
             
             if target<=row[len(row)-1]:
@@ -25,4 +26,59 @@ class Solution(object):
                         r=mid-1
                         
         return False        
+           """
+        
+        toprow,bottomrow=0,len(matrix)-1
+        
+        
+        
+        while toprow<=bottomrow:
+            
+            midrow=(toprow+bottomrow)//2
+            
+            if target>matrix[midrow][-1]:
+                toprow=midrow+1
+                
+            elif target<matrix[midrow][0]:
+                bottomrow=midrow-1
+                
+            else:
+                break
+                
+                
+         
+        targetrow=matrix[midrow]
+        l,r=0,len(targetrow)-1
+        
+       
+        while l<=r:
+            
+            mid=(l+r)//2
+                    
+            if targetrow[mid]==target:
+                return True
+                    
+            elif target>targetrow[mid]:
+                l=mid+1
+                    
+            else:
+                r=mid-1
                         
+        return False        
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

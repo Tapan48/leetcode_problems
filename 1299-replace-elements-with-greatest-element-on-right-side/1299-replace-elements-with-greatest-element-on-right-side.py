@@ -1,8 +1,8 @@
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        
+        """
         n=len(arr)-1
-        maxright=0
+        
         for i in range(n,-1,-1):
             
             if i==n:
@@ -16,6 +16,20 @@ class Solution:
                 maxright=max(maxright,temp)
             
         return arr    
+           """
+        n=len(arr)-1
+        
+        maxright=-1
+        
+        for i in range(n,-1,-1):
+            
+            temp=arr[i]
+            arr[i]=maxright
+            
+            newmax=max(maxright,temp)
+            maxright=newmax
+        return arr    
+            
             
                 
         

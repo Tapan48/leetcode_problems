@@ -6,9 +6,7 @@ class Solution:
         l,r=0,len(nums)-1
         n=len(nums)
         
-        if len(nums)==1:
-            if nums[0]==target:
-                return [0,0]
+        
         
         while l<=r:
             

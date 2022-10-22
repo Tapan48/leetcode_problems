@@ -5,8 +5,8 @@ from collections import deque
 class MyStack:
 
     def __init__(self):
-        q=[]
-        self.queue=q
+        
+        self.queue=[]
         
 
     def push(self, x: int) -> None:

@@ -26,25 +26,28 @@ class Solution:
         return True
            """
         
-        cnt=1
+        cnt=1                           
         
-        for i in range(len(nums)-1):
-            
-            if nums[i]<=nums[i+1]:
-                continue
+        for i in range(len(nums)-1):              ## 1 3 4 6 5 10 
+                                                ##          | part where + - 
+            if nums[i]<=nums[i+1]:                            
+                continue                                  ### find the pointer where element
+                                            ## trasition from increase to decrease
+                                        ## now two possibilities are either set left element 
+                                        ## equal to right or vice versa
         
             
-            if nums[i]>nums[i+1]:
-                if cnt>1:
-                    return False
+                                 
+            if cnt>1:
+                return False
                 
-                if i==0 or nums[i+1]>=nums[i-1]:
-                    nums[i]=nums[i+1]
+            if i==0 or nums[i+1]>=nums[i-1]:
+                nums[i]=nums[i+1]
                     
-                else:
-                    nums[i+1]=nums[i]
+            else:
+                nums[i+1]=nums[i]
                     
-                cnt+=1
+            cnt+=1
                 
         return True       
                 

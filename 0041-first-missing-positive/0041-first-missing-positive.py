@@ -36,11 +36,14 @@ class Solution:
         return 1
         """
         
-        x=set(nums)
+        x=set(nums)                 ## tc o(n)
+                                     ## sc o(n)
         
         
-        
-        for n in range(1,len(nums)+1):
+        for n in range(1,len(nums)+1):        ## missing postive number lies between 
+                                              ##    1<=answer<=len(nums)+1
+                                            ##   worst case : eg [1,2,3,4]
+                                             ## answwer =5 
             
             if n not in x:
                 

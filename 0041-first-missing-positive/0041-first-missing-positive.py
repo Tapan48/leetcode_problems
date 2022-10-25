@@ -3,9 +3,9 @@ class Solution:
         
         
         
-        
+        """
         nums=list(set(nums))
-        nums.sort()
+        nums.sort()         
         
         for i in range(len(nums)):
             
@@ -34,6 +34,25 @@ class Solution:
                     
             return k         
         return 1
+        """
+        
+        x=set(nums)
+        
+        
+        
+        for n in range(1,len(nums)+1):
+            
+            if n not in x:
+                
+                return n
+            
+            if n==len(nums):
+                return n+1
+            
+            
+        
+        
+        
         
         
         

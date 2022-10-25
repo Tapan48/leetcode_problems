@@ -3,7 +3,7 @@ class Solution:
         
         
         
-        
+        """
         s1=""
         s2=""
         
@@ -19,3 +19,7 @@ class Solution:
         
         else:
             return False
+            
+            """
+        
+        return "".join(word1)=="".join(word2)

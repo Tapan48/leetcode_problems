@@ -28,24 +28,24 @@ class Solution:
         stonesnew=[-x for x in stones]
         heapq.heapify(stonesnew)
         
-        while len(stonesnew)!=1 and len(stonesnew)>0:
+        while len(stonesnew)>1 :
             
            
             print(stonesnew)
-            larg1=abs(heapq.heappop(stonesnew))
-            larg2=abs(heapq.heappop(stonesnew))
+            larg1=heapq.heappop(stonesnew)
+            larg2=heapq.heappop(stonesnew)
             
             
             if larg1!=larg2:
                 
-                diff=larg1-larg2
-                val=(-1)*diff
+                val=larg1-larg2
                 heapq.heappush(stonesnew,val)
+        
+        
+        stonesnew.append(0)
+        return abs(stonesnew[0])        
                 
-        if len(stonesnew)==0:
-            return 0
-        else:
-            return abs(stonesnew[0])       
+           
                 
                 
             

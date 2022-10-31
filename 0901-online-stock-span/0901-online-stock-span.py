@@ -14,8 +14,9 @@ class StockSpanner:
                 
             while self.stack and self.stack[-1][0]<=price:
                     
-                    prevprice,prevspan=self.stack.pop()
-                    cnt+=prevspan
+                
+                cnt+=self.stack[-1][1]
+                self.stack.pop()
                     
             self.stack.append((price,cnt))  
             return cnt

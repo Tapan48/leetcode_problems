@@ -5,7 +5,7 @@ class Solution:
         
         l,r=1,n
         
-        res=float("inf")
+        res=r
         while l<=r:
             
             

@@ -3,16 +3,16 @@ class Solution:
         
         
         
-        
+        """
         l,r=len(nums)-2,len(nums)-1
         
         
-        i=l
+        i=l        
         
-        while l>=0:
+        while l>=0:                ## r index denotes the goalpost
+                                      ## we have to check if from l index we can reach r                                          ## index
             
-            
-            if nums[l]+i>=r:
+            if i+nums[l]>=r:
                 
                 r=l
                 l-=1
@@ -27,3 +27,15 @@ class Solution:
         
         else:
                 return False
+                
+            """
+        goal=len(nums)-1
+        
+        for i in range(len(nums)-1,-1,-1):
+            
+            if i+nums[i]>=goal:
+                
+                goal=i
+                
+                
+        return (goal==0)    

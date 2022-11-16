@@ -2,7 +2,7 @@ class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         
         
-        trips.sort(key=lambda x:x[1])
+        trips.sort(key=lambda x:x[1]) ## sorted according to start point of 2d array
         
         
         

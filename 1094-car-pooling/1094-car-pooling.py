@@ -13,13 +13,14 @@ class Solution:
             
             
             numpass,start,end=trip
+            currpass+=numpass
             
             while minheap and start>=minheap[0][0]:
                 
                 currpass-=minheap[0][1]
                 heapq.heappop(minheap)
                 
-            currpass+=numpass    
+                
                 
             if currpass>capacity:
                 return False

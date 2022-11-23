@@ -9,17 +9,17 @@ class Solution:
         
         cursum,res=0,0
         
-        for num in nums:
-            
+        for num in nums:                ## tc o(n)
+                                        
             
             cursum+=num
             
             diff=cursum-k
             
             
-            if diff in prefixsum.keys():
+            
                 
-                res+=prefixsum[diff]
+            res+=prefixsum.get(diff,0)
                 
             prefixsum[cursum]=prefixsum.get(cursum,0)+1    
                 

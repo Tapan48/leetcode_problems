@@ -1,33 +1,64 @@
 class Solution:
     def checkValidString(self, s: str) -> bool:
 
-###  openmax and openmin variables used to solve this question
+###  netopenmax and netopenmin variables used to solve this question
 
-            dp={}
-            def dfs(i,netopen):
-        
-                if i==len(s):
-                   return netopen==0
-                
-                if (i,netopen)in dp:
-                    return dp[(i,netopen)]
-                
-                if netopen<0:
-                    return False
-        
-                    
+
+            netopenmin,netopenmax=0,0
+
+
+            for i in range(len(s)):
+            
                 if s[i]=="(":
+                    netopenmin,netopenmax=netopenmin+1,netopenmax+1
+                    
+                elif s[i]==")": 
+                    netopenmin,netopenmax=netopenmin-1,netopenmax-1
+                    
+                else:
+                    netopenmin,netopenmax=netopenmin-1,netopenmax+1
+                    
+                if netopenmax<0:
+                    return False
+                
+                elif netopenmin<0:
+                    netopenmin=0
+                    
+            return netopenmin==0       
+                    
+        
+        
+        
+
+
+
+
+#             dp={}
+#             def dfs(i,netopen):        ### tc without memoization o(3^n)  sc o(n^2)
+#                                        ### tc with memoization   o(n^3)  sc  o(n^2)
+        
+#                 if i==len(s):
+#                    return netopen==0
+                
+#                 if (i,netopen)in dp:
+#                     return dp[(i,netopen)]
+                
+#                 if netopen<0:
+#                     return False
+        
+                    
+#                 if s[i]=="(":
                     
                     
-                     dp[(i,netopen)]= dfs(i+1,netopen+1)
+#                      dp[(i,netopen)]= dfs(i+1,netopen+1)
                     
-                elif s[i]==")":
-                        dp[(i,netopen)]= dfs(i+1,netopen-1)
-                elif s[i]=="*":
-                    dp[(i,netopen)]= dfs(i+1,netopen+1)or dfs(i+1,netopen-1)or dfs(i+1,netopen)
+#                 elif s[i]==")":
+#                         dp[(i,netopen)]= dfs(i+1,netopen-1)
+#                 elif s[i]=="*":
+#                     dp[(i,netopen)]= dfs(i+1,netopen+1)or dfs(i+1,netopen-1)or dfs(i+1,netopen)
                     
-                return dp[(i,netopen)]    
-            return   dfs(0,0)  
+#                 return dp[(i,netopen)]    
+#             return   dfs(0,0)  
                  
                 
                 

@@ -1,0 +1,1 @@
+in merge sort, merge function merges two sorted arrays but u cant merge in the same array, u need to have a different array

@@ -17,14 +17,14 @@ class Solution:
         
         
         
-        def merge(l,mid,h,arr):      ### merges two sorted subarrays 
+        def merge(l,mid,h,arr):      ### merges two sorted subarrays         
             
             i=0
             j=0
             k=l
             
-            left=arr[l:mid+1]
-            right=arr[mid+1:h+1]
+            left=arr[l:mid+1]           ### left sorted subarray copy
+            right=arr[mid+1:h+1]          ### right sorted subarray copy
        
             
             while i<len(left) and j<len(right):
@@ -57,6 +57,10 @@ class Solution:
             
             
         def divide(l,h,arr):
+            
+            
+            if l==h:
+                return arr
             
             
             

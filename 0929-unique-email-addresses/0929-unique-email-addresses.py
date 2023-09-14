@@ -2,35 +2,48 @@ class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         
         
-        for i,email in enumerate(emails):
-            
-            
+        unique=set()
+        
+        for email in emails:
             
             local,domain=email.split("@")
+            local=local.split("+")[0]
+            local=local.replace(".","")
             
-            if "+"in local:
+            unique.add((local,domain))
+        return len(unique)     
             
-                 index=local.find("+")
-                 useful= email[:index]
+        
+        
+#         for i,email in enumerate(emails):
             
-                 useful2=useful.replace(".","")
+            
+            
+#             local,domain=email.split("@")
+            
+#             if "+"in local:
+            
+#                  index=local.find("+")
+#                  useful= email[:index]
+            
+#                  useful2=useful.replace(".","")
             
                  
                 
-            else:
-                useful2=local.replace(".","")
+#             else:
+#                 useful2=local.replace(".","")
                 
-            newemail=useful2+"@"+domain
+#             newemail=useful2+"@"+domain
             
-            emails[i]=newemail
+#             emails[i]=newemail
             
-        x=set(emails)
-        return len(x)
+#         x=set(emails)
+#         return len(x)
         
             
              
             
-            
+#             In summary, the time complexity is O(n * m), and the space complexity is O(n), where n is the number of email addresses and m is the average length of an email address
            
                 
             

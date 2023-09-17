@@ -9,7 +9,14 @@ class Solution:
                 nums.remove(num)
                 nums.append(0)
         
-      
+#         l=0
+#         r=0
+        
+#         for r in range(len(nums)):
+            
+#             if nums[r]:
+#                 nums[r],nums[l]=nums[l],nums[r]
+#                 l+=1
                 
               
                     

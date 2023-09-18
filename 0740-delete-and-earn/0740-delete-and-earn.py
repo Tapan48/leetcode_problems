@@ -10,7 +10,7 @@ class Solution:
         arr=list(x)
         arr.sort()
         
-        dp={}
+        dp={}     ### dp[i] represents max points that can be achieved from that index
         
         
         def dfs(i):

@@ -3,7 +3,7 @@ class Solution:
         
         
         
-        stack=[]
+        stack=[]          ###  (nums[i],minleft)
         minimum=nums[0]
         
         for k in range(len(nums)):

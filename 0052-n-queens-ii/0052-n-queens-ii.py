@@ -14,14 +14,13 @@ class Solution:
         
         
         
-        
+        cnt=0
         def backtracking(r):
+            nonlocal cnt
             
             if r==n:
                 
-                copy= ["".join(row) for row in board]
-                
-                res.append(copy)
+                cnt+=1
                 return 
                 
                 
@@ -48,5 +47,5 @@ class Solution:
                 col.remove(c)
                 
         backtracking(0)
-        return len(res)
+        return cnt
         

@@ -13,7 +13,7 @@ class Solution:
         q.append(root)
         res=[]
         
-        cnt=0
+    
         
         while q :
             
@@ -36,12 +36,12 @@ class Solution:
                         q.append(node.right)
                 
                 
-            if cnt%2:
+            if len(res)%2:                                ### if odd level  store in reverse order
                 res.append(level[::-1])
             else:
-                res.append(level) if level else res
+                res.append(level) if level else res       
                 
-            cnt+=1  
+          
         return res   
                     
                 

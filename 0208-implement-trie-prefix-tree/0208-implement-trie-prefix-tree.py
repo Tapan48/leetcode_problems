@@ -1,9 +1,9 @@
 class TrieNode():          ## trienode properties
     def __init__(self):
 
-       self.children={}   
+        self.children={}   
 
-       self.endofword=False
+        self.endofword=False
 
 class Trie:
 

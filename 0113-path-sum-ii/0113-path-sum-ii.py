@@ -23,6 +23,7 @@ class Solution:
             if not(root.left)and not(root.right) and cursum==targetSum:
                 
                 res.append(arr.copy())
+        
                 
                 
             

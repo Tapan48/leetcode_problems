@@ -7,13 +7,13 @@ class Solution:
         
         for i in range(n):
             
-            time[i]=dist[i]/speed[i]
+            time[i]=math.ceil(dist[i]/speed[i])
             
         
         
         minute=0
         cnt=0
-        time.sort()
+        time.sort()  
         
         for i in range(n):
             

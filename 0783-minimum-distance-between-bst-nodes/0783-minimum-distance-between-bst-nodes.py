@@ -21,12 +21,11 @@ class Solution:
         
         inorder(root)
         res=arr[len(arr)-1]
-        for i in range(len(arr)):
-            for j in range(i+1,len(arr)):
-                
-                diff=(arr[j]-arr[i])
-                
-                res=min(res,diff)
+        for i in range(len(arr)-1):
+              
+            diff=arr[i+1]-arr[i]
+            res=min(res,diff)
+            
         return res        
                 
         

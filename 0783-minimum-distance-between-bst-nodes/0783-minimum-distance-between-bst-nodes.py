@@ -21,7 +21,7 @@ class Solution:
             if prev:
                 res=min(res,root.val-prev.val)
                 
-            prev=root   
+            prev=root  
             inorder(root.right)
         inorder(root)
         return res

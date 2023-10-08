@@ -13,11 +13,12 @@ class Solution:
                 
                 integer=int(s[i:j+1])
                 
-                if  prev-1==integer:
+                if  prev-1==integer and dfs(j+1,integer):
+                    return True
                     
-                   
-                    if dfs(j+1,integer):
-                        return True
+                  
+                    
+                      
             return False
         for i in range(len(s)-1):
             

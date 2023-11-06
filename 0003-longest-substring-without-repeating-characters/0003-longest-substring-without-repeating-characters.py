@@ -3,29 +3,49 @@ class Solution:
         
         
         
-        
-        l,r=0,0
         res=0
-        
-        freq={}
-        
+        l=0
+        x=set()
         for r in range(len(s)):
             
             
+            while s[r]in x:
+                x.remove(s[l])
+                
+                l+=1
             
-             freq[s[r]]=freq.get(s[r],0)+1
+            x.add(s[r])
+            
+            res=max(res,r-l+1)
+        return res    
+            
+            
+        
+        
+        
+        
+#         l,r=0,0
+#         res=0
+        
+#         freq={}
+        
+#         for r in range(len(s)):
+            
+            
+            
+#              freq[s[r]]=freq.get(s[r],0)+1
                  
-             while freq[s[r]]!=1:
+#              while freq[s[r]]!=1:
                  
-                 freq[s[l]]-=1
+#                  freq[s[l]]-=1
                  
-                 if freq[s[l]]==0:
+#                  if freq[s[l]]==0:
                  
-                    del freq[s[l]]
-                 l+=1
-             res=max(res,r-l+1)
+#                     del freq[s[l]]
+#                  l+=1
+#              res=max(res,r-l+1)
                  
-        return res           
+#         return res           
                  
                     
                  

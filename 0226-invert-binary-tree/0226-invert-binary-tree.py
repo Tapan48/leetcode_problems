@@ -9,9 +9,11 @@ class Solution:
         
         
         def dfs(root):
-            
             if not root:
                 return None
+            
+            if not root.left and not root.right:
+                return root
             
             
             temp=root.left

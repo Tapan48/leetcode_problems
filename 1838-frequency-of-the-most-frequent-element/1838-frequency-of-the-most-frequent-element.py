@@ -1,15 +1,15 @@
 class Solution:
     def maxFrequency(self, nums: List[int], k: int) -> int:
         
-        res=0
-        l=0
+     
+        l,res=0,0
         nums.sort()
-        
         cursum=0
         for r in range(len(nums)):
             
           
             cursum+=nums[r]
+            
             while (nums[r]*(r-l+1))>cursum+k:
                 
                 cursum-=nums[l]

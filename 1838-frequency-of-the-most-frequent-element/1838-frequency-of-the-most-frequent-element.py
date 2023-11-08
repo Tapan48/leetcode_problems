@@ -8,7 +8,7 @@ class Solution:
         cursum=0
         for r in range(len(nums)):
             
-            winlen=r-l+1
+          
             cursum+=nums[r]
             while (nums[r]*(r-l+1))>cursum+k:
                 

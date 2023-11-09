@@ -4,9 +4,13 @@ class Solution:
         
         
         
-        cursum,l=0,0
+        l,cursum=0,0
         res=0
+        
+        
         for r in range(len(arr)):
+            
+            
             
             cursum+=arr[r]
             
@@ -15,10 +19,19 @@ class Solution:
                 cursum-=arr[l]
                 l+=1
             
-            if (r-l+1)==k and (cursum/(r-l+1))>=threshold:
+            if (r-l+1)==k and (cursum/k)>=threshold:
                 res+=1
         return res        
                 
+            
+            
+                
+            
+            
+        
+        
+        
+
             
             
             

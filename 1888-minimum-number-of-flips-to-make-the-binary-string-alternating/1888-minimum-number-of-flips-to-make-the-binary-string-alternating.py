@@ -19,7 +19,7 @@ class Solution:
             
         
         l=0
-        res=len(s)
+        res=n
         diff1,diff2=0,0
         for r in range(len(s)):
             

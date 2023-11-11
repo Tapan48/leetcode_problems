@@ -5,7 +5,7 @@ class Solution:
         
         l,res=0,0
         freq={}
-        max_freq_char = ''
+       
         max_freq_count = 0
         
         for r in range(len(s)):
@@ -14,7 +14,7 @@ class Solution:
             
             if freq[s[r]] > max_freq_count:
                 max_freq_count = freq[s[r]]
-                max_freq_char = s[r]
+               
                 
                 
                 

@@ -12,8 +12,8 @@ class Solution:
             
             freq[s[r]]=freq.get(s[r],0)+1
             
-            if freq[s[r]] > max_freq_count:
-                max_freq_count = freq[s[r]]
+         
+            max_freq_count = max(freq[s[r]],max_freq_count)
                
                 
                 

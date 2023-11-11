@@ -1,7 +1,7 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
         
-        
+         ## dp[i]: represents min no of jumps from that index to last index
         dp={}
         res=float("inf")
         def dfs(i):

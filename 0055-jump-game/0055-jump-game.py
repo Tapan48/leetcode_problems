@@ -2,40 +2,70 @@ class Solution:
     def canJump(self, nums: List[int]) -> bool:
         
         
+         goal=len(nums)-1
         
-        """
-        l,r=len(nums)-2,len(nums)-1
-        
-        
-        i=l        
-        
-        while l>=0:                ## r index denotes the goalpost
-                                      ## we have to check if from l index we can reach r                                          ## index
-            
-            if i+nums[l]>=r:
-                
-                r=l
-                l-=1
-                i=l
-            else:
-                
-                l-=1
-                i=l
-                
-        if r==0:
-            return True
-        
-        else:
-                return False
-                
-            """
-        goal=len(nums)-1
-        
-        for i in range(len(nums)-1,-1,-1):
+         for i in range(len(nums)-1,-1,-1):
             
             if i+nums[i]>=goal:
-                
                 goal=i
+        
+         return True if goal==0 else False
                 
                 
-        return (goal==0)    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+            
+#         dp={} 
+#         def dfs(i):
+            
+#             if i==len(nums)-1:
+#                 return True
+#             if i in dp:
+#                 return dp[i]
+            
+#             for num in range(1,nums[i]+1):
+                
+#                 dp[i]=dfs(i+num)
+#                 if dp[i]:
+#                     return True
+#             dp[i]=False    
+#             return False
+#         return dfs(0)
+#         goal=len(nums)-1                 ## tc o(n) greedy
+#                                               ## goal is to reach at end index from start 
+#                                      ## index, goal is at end and we traverse array from                                      ## last index and check for each index if we can reach
+#                                  ## the goal index, if we can then we update the goal                                    variable to current index
+                    
+#         for i in range(len(nums)-1,-1,-1):
+            
+#             if i+nums[i]>=goal:
+                
+#                 goal=i
+                
+                
+#         return True if (goal==0) else False
+
+    
+    

@@ -5,16 +5,15 @@ class Solution:
         dp={}
         
         def dfs(i,steps):
-            
-            if steps==0:
-                return 1 if i==0 else 0
             if  (i,steps)in dp:
                 return dp[(i,steps)]
             
-            elif i < 0 or i == arrLen:
+            if i < 0 or i == arrLen:
                 return 0
-      
-        
+            if i<0:
+                return 0
+            if  steps==0:
+                return 1 if i==0 else 0
             
             
             x=dfs(i,steps-1)

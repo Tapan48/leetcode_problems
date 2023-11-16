@@ -5,7 +5,7 @@ class Solution:
         
         dp={}
         
-        def dfs(choices,remainder):
+        def dfs(choices,remainder):     ### check how caching being applied and analyze tc
             
             if choices[-1]>=remainder:
                 return True

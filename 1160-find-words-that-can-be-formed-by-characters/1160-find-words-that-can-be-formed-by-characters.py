@@ -16,6 +16,7 @@ class Solution:
                 
                 if char not in freqchars or curword[char]>freqchars[char]:
                     good=False
+                    break
                 
             if good:
                 res+=len(word)

@@ -3,11 +3,30 @@ class Solution:
         
         
         
-        prices.sort()
+            min1=min2=float("inf")
+
+            for price in prices:
+
+                if price<min2:
+
+                    if price<min1:
+                        min2=min1
+                        min1=price
+                    else:
+                        min2=price
+            cost=min1+min2
+            left=money-cost
+            return left if left>=0 else money
         
-        cost=prices[0]+prices[1]
         
-        if (money-cost)>=0:
-            return money-cost
-        else:
-            return money
+        
+#         prices.sort()
+        
+#         cost=prices[0]+prices[1]
+        
+#         if (money-cost)>=0:
+#             return money-cost
+#         else:
+#             return money
+
+          

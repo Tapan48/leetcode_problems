@@ -12,28 +12,22 @@ class Solution:
         arr1=[]
         arr2=[]
         
-        def dfs(root,tree1):
+        def dfs(root,tree):
             
             if not root:
-                return 
-            
-            
-            
+                return            
+                        
             if not(root.left)and not(root.right):
-                if tree1:
-                    arr1.append(root.val)
-                else:
-                    arr2.append(root.val)
+                tree.append(root.val)
+             
             
-            dfs(root.left,tree1)
-            dfs(root.right,tree1)
+            dfs(root.left,tree)
+            dfs(root.right,tree)
             
-        dfs(root1,True)  
-        dfs(root2,False)
-        if arr1==arr2:
-            return True
-        
-        return False
+        dfs(root1,arr1)  
+        dfs(root2,arr2)
+        return arr1==arr2
+      
             
                 
             

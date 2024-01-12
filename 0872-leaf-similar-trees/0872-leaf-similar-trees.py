@@ -12,17 +12,17 @@ class Solution:
         arr1=[]
         arr2=[]
         
-        def dfs(root,tree):
+        def dfs(root,arr):
             
             if not root:
                 return            
                         
             if not(root.left)and not(root.right):
-                tree.append(root.val)
+                arr.append(root.val)
              
             
-            dfs(root.left,tree)
-            dfs(root.right,tree)
+            dfs(root.left,arr)
+            dfs(root.right,arr)
             
         dfs(root1,arr1)  
         dfs(root2,arr2)

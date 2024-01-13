@@ -6,7 +6,7 @@ class Solution:
         s.sort()
         
         
-        cnt=0
+        # cnt=0
         
         gptr,sptr=0,0
         glen=len(g)
@@ -16,12 +16,12 @@ class Solution:
             
             if s[sptr]>=g[gptr]:
                 
-                cnt+=1
+                # cnt+=1
                 sptr+=1
                 gptr+=1
             else:
                 sptr+=1
-        return cnt        
+        return gptr        
             
         
         

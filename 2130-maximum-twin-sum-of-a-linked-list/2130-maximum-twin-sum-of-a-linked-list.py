@@ -18,11 +18,20 @@ class Solution:
             
         maxsum=0
         n=len(arr)
-        for i in range((n//2)+1):
+        
+        l,r=0,n-1
+        
+        while l<r:
             
-            cursum=arr[i]+arr[n-1-i]
-            maxsum=max(maxsum,cursum)
-        return maxsum    
+            cursum=arr[l]+arr[r]
+            maxsum=max(cursum,maxsum)
+            
+            l+=1
+            r-=1
+        return maxsum     
+            
+            
+       
             
             
             
